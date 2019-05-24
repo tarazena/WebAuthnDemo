@@ -2,6 +2,10 @@
   <div class="reveal">
     <div class="slides">
       <SubjectSlide/>
+      <History />
+      <WebAuthn />
+      <Benefits />
+      <LiveDemo />
       <!-- 
         History of Password Issues
         Intro WebAuthn
@@ -24,12 +28,20 @@
 <script>
 import OutroSlide from "./Slides/OutroSlide";
 import SubjectSlide from "./Slides/SubjectSlide";
+import History from "./Slides/History";
+import WebAuthn from "./Slides/webAuthn";
+import Benefits from "./Slides/Benefits";
+import LiveDemo from "./Slides/LiveDemo";
 
 export default {
   name: "SlidesContainer",
   components: {
-    OutroSlide,
-    SubjectSlide
+    SubjectSlide,
+    History,
+    WebAuthn,
+    Benefits,
+    LiveDemo,
+    OutroSlide
   }
 };
 </script>
