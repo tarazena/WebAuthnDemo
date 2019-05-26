@@ -78,36 +78,33 @@ export default {
       const user = {
         name: this.webAuthnEmail,
         displayName: "Hassan",
-        id: "132456789"
+        id: Uint8Array.from("UZSL85T9AFC", c => c.charCodeAt(0))
       };
 
-      const challenge = await this.getLoginChallenge(user);
-      console.log(challenge);
+      await this.getLoginChallenge(user);
     },
     getLoginChallenge: async function(user) {
-      const publicKeyCredentialCreationOptions = {
-        challenge: Uint8Array.from("someassstring", c =>
-          c.charCodeAt(0)
-        ),
+      var randomChallengeBuffer = new Uint8Array(32);
+      window.crypto.getRandomValues(randomChallengeBuffer);
+      const publicKey = {
+        challenge: randomChallengeBuffer,
         rp: {
-          name: "Duo Security",
-          id: "webauthn-daa90.firebaseapp.com"
+          name: "Hassan Al Rawi"
         },
-        user: {
-          id: Uint8Array.from("UZSL85T9AFC", c => c.charCodeAt(0)),
-          name: "lee@webauthn.guide",
-          displayName: "Lee"
-        },
+        user: user,
         pubKeyCredParams: [{ alg: -7, type: "public-key" }],
         authenticatorSelection: {
           authenticatorAttachment: "cross-platform"
         },
-        timeout: 60000,
         attestation: "direct"
       };
 
-      const credential = await navigator.credentials.create({
-        publicKey: publicKeyCredentialCreationOptions
+      await navigator.credentials.create({ publicKey }).then((newCredentialInfo) => {
+        // eslint-disable-next-line
+        console.log(newCredentialInfo);
+      }).catch((error) => {
+        // eslint-disable-next-line
+        console.log(error);
       });
     }
   }
