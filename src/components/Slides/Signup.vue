@@ -1,21 +1,23 @@
 <template>
   <section>
+    <section>
+      <h2>Demo - Signup</h2>  
     <table>
       <thead>
         <tr>
-          <td>Normal Auth</td>
-          <td>Web Authn</td>
+          <td>Regular Auth</td>
+          <td>WebAuthn</td>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>
+          <td style="max-width: 400px">
             <form @submit="normalSubmit">
-              <div class="container">
+              <div>
                 <p class="formP">Please fill in this form to create an account.</p>
                 <hr>
                 <label for="email">
-                  <b>Email</b>
+                  <p>Email</p>
                 </label>
                 <input type="text" placeholder="Enter Email" v-model="email" name="email" required>
                 <label for="psw">
@@ -34,7 +36,7 @@
               </div>
             </form>
           </td>
-          <td>
+          <td style="max-width: 400px">
             <form>
               <div class="container">
                 <p class="formP">Please fill in this form to create an account.</p>
@@ -58,6 +60,68 @@
         </tr>
       </tbody>
     </table>
+    </section>
+    <section>
+      <h2>Demo - Login</h2>
+      <table>
+      <thead>
+        <tr>
+          <td>Regular Auth</td>
+          <td>WebAuthn</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="max-width: 400px">
+            <form @submit="normalSubmit">
+              <div>
+                <p class="formP">Please fill in this form to create an account.</p>
+                <hr>
+                <label for="email">
+                  <p>Email</p>
+                </label>
+                <input type="text" placeholder="Enter Email" v-model="email" name="email" required>
+                <label for="psw">
+                  <b>Password</b>
+                </label>
+                <input
+                  type="password"
+                  v-model="password"
+                  placeholder="Enter Password"
+                  name="psw"
+                  required
+                >
+                <div class="clearfix">
+                  <button type="submit" class="signupbtn">Login</button>
+                </div>
+              </div>
+            </form>
+          </td>
+          <td style="max-width: 400px">
+            <form>
+              <div class="container">
+                <p class="formP">Please fill in this form to create an account.</p>
+                <hr>
+                <label for="email">
+                  <b>Email</b>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Email"
+                  v-model="webAuthnEmail"
+                  name="email"
+                  required
+                >
+                <div class="clearfix">
+                  <button type="button" @click="webAuthnSubmit" class="signupbtn">Login</button>
+                </div>
+              </div>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
   </section>
 </template>
 

@@ -5,18 +5,19 @@
       <History />
       <WebAuthn />
       <Benefits />
-      <LiveDemo />
+      <ReplaceOAuth />
+      <Signup /> 
       <!-- 
-        History of Password Issues
-        Intro WebAuthn
-        What is it?
+        History of Password Issues    -- done
+        Intro WebAuthn    -- done
+        What is it?   -- done
+        Does WebAuthn Replace OAuth??
+        What the future of passwrds
         Live Demo
-          Side by side web sign up
-          screen shot of DB
+          Side by side web sign up --done
+          screen shot of DB   -- done
           Side by side web log in
           How it works
-        Why this is more secure
-        What the future of passwrds
         Questions?
         Outro, Maybe add Snake?
       -->
@@ -31,7 +32,8 @@ import SubjectSlide from "./Slides/SubjectSlide";
 import History from "./Slides/History";
 import WebAuthn from "./Slides/webAuthn";
 import Benefits from "./Slides/Benefits";
-import LiveDemo from "./Slides/LiveDemo";
+import Signup from "./Slides/Signup";
+import ReplaceOAuth from "./Slides/ReplaceOAuth";
 
 export default {
   name: "SlidesContainer",
@@ -40,7 +42,8 @@ export default {
     History,
     WebAuthn,
     Benefits,
-    LiveDemo,
+    ReplaceOAuth,
+    Signup,
     OutroSlide
   }
 };
