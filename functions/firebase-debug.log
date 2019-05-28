@@ -1,0 +1,23 @@
+[debug] [2019-05-28T02:35:43.562Z] ----------------------------------------------------------------------
+[debug] [2019-05-28T02:35:43.563Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\theph\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-05-28T02:35:43.563Z] CLI Version:   6.10.0
+[debug] [2019-05-28T02:35:43.563Z] Platform:      win32
+[debug] [2019-05-28T02:35:43.563Z] Node Version:  v8.11.2
+[debug] [2019-05-28T02:35:43.564Z] Time:          Mon May 27 2019 22:35:43 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-05-28T02:35:43.564Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-28T02:35:43.572Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-28T02:35:43.572Z] > authorizing via signed-in user
+[debug] [2019-05-28T02:35:43.572Z] [iam] checking project webauthn-daa90 for permissions ["firebase.projects.get"]
+[debug] [2019-05-28T02:35:43.573Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/webauthn-daa90:testIamPermissions  
+
+[debug] [2019-05-28T02:35:43.971Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-28T02:35:43.977Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/webauthn-daa90  
+ 
+[debug] [2019-05-28T02:35:44.165Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@8 from host.
+[debug] [2019-05-28T02:35:44.172Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/600504825345:getServerAppConfig  
+ 
+[debug] [2019-05-28T02:35:44.358Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "E:\Development\WebAuthn presentation\Presentation\functions" for Cloud Functions...
