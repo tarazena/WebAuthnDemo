@@ -209,7 +209,7 @@ export default {
       const self = this;
       axios
         .post(
-          "http://localhost:5000/webauthn-daa90/us-central1/widgets/register",
+          "http://localhost:5000/webauthn-daa90/us-central1/api/register",
           user
         )
         .then((response) => {
@@ -235,8 +235,12 @@ export default {
       return await navigator.credentials
         .create({ publicKey })
         .then(newCredentialInfo => {
-          // eslint-disable-next-line
-          return newCredentialInfo;
+          const data = this.formatCredResponse(newCredentialInfo);
+          return axios.post("http://localhost:5000/webauthn-daa90/us-central1/api/response", {...data, userID: creds.user.name}).then((response) => {
+            return response.data;
+          }).catch(error => {
+            return error;
+          });
         })
         .catch(error => {
           // eslint-disable-next-line
@@ -248,6 +252,17 @@ export default {
       makeCredReq.challenge = Buffer.from(makeCredReq.challenge.data);
       makeCredReq.user.id = Buffer.from(makeCredReq.user.id);
       return makeCredReq;
+    },
+    formatCredResponse(creds) {
+      return {
+        id: creds.id,
+        rawId: Buffer.from(creds.rawId),
+        response: {
+          attestationObject: Buffer.from(creds.response.attestationObject),
+          clientDataJSON: Buffer.from(creds.response.clientDataJSON)
+        },
+        type: creds.type
+      };
     }
   }
 };

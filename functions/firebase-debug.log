@@ -1,23 +1,97 @@
-[debug] [2019-05-28T02:35:43.562Z] ----------------------------------------------------------------------
-[debug] [2019-05-28T02:35:43.563Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\theph\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
-[debug] [2019-05-28T02:35:43.563Z] CLI Version:   6.10.0
-[debug] [2019-05-28T02:35:43.563Z] Platform:      win32
-[debug] [2019-05-28T02:35:43.563Z] Node Version:  v8.11.2
-[debug] [2019-05-28T02:35:43.564Z] Time:          Mon May 27 2019 22:35:43 GMT-0400 (Eastern Daylight Time)
-[debug] [2019-05-28T02:35:43.564Z] ----------------------------------------------------------------------
+[debug] [2019-06-03T01:20:32.804Z] ----------------------------------------------------------------------
+[debug] [2019-06-03T01:20:32.806Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\theph\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-03T01:20:32.808Z] CLI Version:   6.10.0
+[debug] [2019-06-03T01:20:32.808Z] Platform:      win32
+[debug] [2019-06-03T01:20:32.808Z] Node Version:  v8.11.2
+[debug] [2019-06-03T01:20:32.808Z] Time:          Sun Jun 02 2019 21:20:32 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-06-03T01:20:32.808Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-05-28T02:35:43.572Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-05-28T02:35:43.572Z] > authorizing via signed-in user
-[debug] [2019-05-28T02:35:43.572Z] [iam] checking project webauthn-daa90 for permissions ["firebase.projects.get"]
-[debug] [2019-05-28T02:35:43.573Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/webauthn-daa90:testIamPermissions  
+[debug] [2019-06-03T01:20:32.814Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-03T01:20:32.814Z] > authorizing via signed-in user
+[debug] [2019-06-03T01:20:32.814Z] [iam] checking project webauthn-daa90 for permissions ["firebase.projects.get"]
+[debug] [2019-06-03T01:20:32.816Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/webauthn-daa90:testIamPermissions  
 
-[debug] [2019-05-28T02:35:43.971Z] <<< HTTP RESPONSE 200
-[debug] [2019-05-28T02:35:43.977Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/webauthn-daa90  
+[debug] [2019-06-03T01:20:33.084Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-03T01:20:33.086Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/webauthn-daa90  
  
-[debug] [2019-05-28T02:35:44.165Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-03T01:20:33.268Z] <<< HTTP RESPONSE 200
 [info] +  functions: Using node@8 from host.
-[debug] [2019-05-28T02:35:44.172Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/600504825345:getServerAppConfig  
+[debug] [2019-06-03T01:20:33.295Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/600504825345:getServerAppConfig  
  
-[debug] [2019-05-28T02:35:44.358Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-03T01:20:33.508Z] <<< HTTP RESPONSE 200
 [info] +  functions: Emulator started at http://localhost:5000
 [info] i  functions: Watching "E:\Development\WebAuthn presentation\Presentation\functions" for Cloud Functions...
+[debug] [2019-06-03T01:20:33.884Z] Functions runtime initialized.
+[debug] [2019-06-03T01:20:33.884Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-03T01:20:34.821Z] firebase-admin has been stubbed.
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/webauthn-daa90/us-central1/api
+[debug] [2019-06-03T01:21:52.889Z] Accepted request POST /webauthn-daa90/us-central1/api/register --> api
+[debug] [2019-06-03T01:21:53.260Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-03T01:21:53.261Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-03T01:21:54.247Z] firebase-admin has been stubbed.
+[info] i  Your code has been provided a "firebase-admin" instance.
+[debug] [2019-06-03T01:21:54.427Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-03T01:21:54.427Z] 
+[debug] [2019-06-03T01:21:54.427Z] Running api in mode HTTPS
+[debug] [2019-06-03T01:21:54.432Z] {"socketPath":"\\\\?\\pipe\\E:\\Development\\WebAuthn presentation\\Presentation\\functions\\17748"}
+[debug] [2019-06-03T01:21:54.432Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\E:\\Development\\WebAuthn presentation\\Presentation\\functions\\17748"}
+[debug] [2019-06-03T01:21:54.447Z] Ephemeral server used!
+[debug] [2019-06-03T01:21:54.647Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-03T01:22:00.470Z] Accepted request POST /webauthn-daa90/us-central1/api/register --> api
+[debug] [2019-06-03T01:22:00.851Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-03T01:22:00.853Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-03T01:22:01.783Z] firebase-admin has been stubbed.
+[info] i  Your code has been provided a "firebase-admin" instance.
+[debug] [2019-06-03T01:22:01.953Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-03T01:22:01.953Z] 
+[debug] [2019-06-03T01:22:01.953Z] Running api in mode HTTPS
+[debug] [2019-06-03T01:22:01.958Z] {"socketPath":"\\\\?\\pipe\\E:\\Development\\WebAuthn presentation\\Presentation\\functions\\3688"}
+[debug] [2019-06-03T01:22:01.959Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\E:\\Development\\WebAuthn presentation\\Presentation\\functions\\3688"}
+[debug] [2019-06-03T01:22:01.974Z] Ephemeral server used!
+[debug] [2019-06-03T01:22:02.187Z] Ephemeral server survived.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-03T01:22:07.806Z] Accepted request POST /webauthn-daa90/us-central1/api/response --> api
+[debug] [2019-06-03T01:22:08.185Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-03T01:22:08.186Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-03T01:22:09.116Z] firebase-admin has been stubbed.
+[info] i  Your code has been provided a "firebase-admin" instance.
+[debug] [2019-06-03T01:22:09.295Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-03T01:22:09.295Z] 
+[debug] [2019-06-03T01:22:09.295Z] Running api in mode HTTPS
+[debug] [2019-06-03T01:22:09.300Z] {"socketPath":"\\\\?\\pipe\\E:\\Development\\WebAuthn presentation\\Presentation\\functions\\9348"}
+[debug] [2019-06-03T01:22:09.302Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\E:\\Development\\WebAuthn presentation\\Presentation\\functions\\9348"}
+[debug] [2019-06-03T01:22:09.321Z] Ephemeral server used!
+[debug] [2019-06-03T01:22:09.537Z] Ephemeral server survived.
+[info] >  USER: [object Object]
+[info] >  REQ ID: WyR9RMtKKfxJZmihwJ95OojtKHFM8oEFdMBGLVEfxSZ4hmlCHxk8jXPhEMFaE3jg5enRdeA5v3xFtSZBisYo2Q
+[info] >  WyR9RMtKKfxJZmihwJ95OojtKHFM8oEFdMBGLVEfxSZ4hmlCHxk8jXPhEMFaE3jg5enRdeA5v3xFtSZBisYo2Q
+[info] >  �P��4�w[N�]���;�TV�y���;���i��
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-03T01:22:22.478Z] Accepted request POST /webauthn-daa90/us-central1/api/response --> api
+[debug] [2019-06-03T01:22:22.860Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-06-03T01:22:22.861Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-03T01:22:23.808Z] firebase-admin has been stubbed.
+[info] i  Your code has been provided a "firebase-admin" instance.
+[debug] [2019-06-03T01:22:23.972Z] Trigger "api" has been found, beginning invocation!
+[debug] [2019-06-03T01:22:23.972Z] 
+[debug] [2019-06-03T01:22:23.972Z] Running api in mode HTTPS
+[debug] [2019-06-03T01:22:23.977Z] {"socketPath":"\\\\?\\pipe\\E:\\Development\\WebAuthn presentation\\Presentation\\functions\\10856"}
+[debug] [2019-06-03T01:22:23.978Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\E:\\Development\\WebAuthn presentation\\Presentation\\functions\\10856"}
+[debug] [2019-06-03T01:22:23.994Z] Ephemeral server used!
+[debug] [2019-06-03T01:22:24.192Z] Ephemeral server survived.
+[info] >  USER: [object Object]
+[info] >  REQ ID: WyR9RMtKKfxJZmihwJ95OojtKHFM8oEFdMBGLVEfxSZ4hmlCHxk8jXPhEMFaE3jg5enRdeA5v3xFtSZBisYo2Q
+[info] >  WyR9RMtKKfxJZmihwJ95OojtKHFM8oEFdMBGLVEfxSZ4hmlCHxk8jXPhEMFaE3jg5enRdeA5v3xFtSZBisYo2Q
+[info] >  �P��4�w[N�]���;�TV�y���;���i��
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-06-03T01:22:43.624Z] File E:\Development\WebAuthn presentation\Presentation\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-03T01:22:45.101Z] Functions runtime initialized.
+[debug] [2019-06-03T01:22:45.101Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-03T01:22:46.103Z] firebase-admin has been stubbed.
+[info] i  Your code has been provided a "firebase-admin" instance.
