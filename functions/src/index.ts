@@ -77,7 +77,7 @@ app.post('/response', (req, res) => {
 
   let webauthnResp = req.body;
   return getUserByID(req.body.userID).then((user: any) => {
-    console.log('USER: ' + user);
+    console.log('USER: ' + user.id.type);
     console.log('REQ ID: ' + req.body.id);
     const id = Buffer.from(user.id.data);
     console.log(id);
